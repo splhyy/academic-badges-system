@@ -69,7 +69,7 @@ Concluir missão e conceder badge
 estudante.ConcluirMissao(missao);
 await service.ConcederBadgePorMissaoAsync(estudante.Id, missao.Id);
 
-🧪 Executando os Testes
+## 🧪 Executando os Testes
 
 # Restaurar pacotes
 ````

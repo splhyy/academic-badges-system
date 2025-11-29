@@ -53,19 +53,19 @@ AcademicBadgesSystem/
 
 ### Exemplo Básico
 
-// Configuração
+Configuração
 var context = new InMemoryDbContext();
 var estudanteRepo = new EstudanteRepository(context);
 var badgeRepo = new BadgeRepository(context);
 var missaoRepo = new MissaoRepository(context);
 var service = new SistemaConcessaoService(estudanteRepo, badgeRepo, missaoRepo);
 
-// Criar dados
+Criar dados
 var badge = new Badge("Primeira Conquista", "Completou a primeira missão", 1);
 var missao = new Missao("Missão Inicial", "Primeira missão do sistema", 1, badge.Id);
 var estudante = new Estudante("João Silva", "joao@email.com");
 
-// Concluir missão e conceder badge
+Concluir missão e conceder badge
 estudante.ConcluirMissao(missao);
 await service.ConcederBadgePorMissaoAsync(estudante.Id, missao.Id);
 
@@ -83,7 +83,7 @@ dotnet build
 ````
 dotnet test
 ````
-📊 Resultados dos Testes
+## 📊 Resultados dos Testes
 
 Resumo do teste: 
 - Total: 21 testes
@@ -92,7 +92,7 @@ Resumo do teste:
 - Ignorados: 0
 - Duração: 7.1s
 
-🎯 Regras de Negócio Implementadas
+## 🎯 Regras de Negócio Implementadas
 Validações
 ✅ Nome e descrição obrigatórios para badges e missões
 
@@ -111,7 +111,7 @@ Concessão de Badges
 
 ✅ Pontuação calculada automaticamente (dificuldade × 100)
 
-🔄 Padrões de Projeto Utilizados
+## 🔄 Padrões de Projeto Utilizados
 Repository Pattern: Abstração do acesso a dados
 
 Dependency Injection: Inversão de dependência
@@ -122,7 +122,7 @@ Domain-Driven Design: Design orientado ao domínio
 
 Clean Architecture: Separação de responsabilidades
 
-👨‍💻 Desenvolvimento
+## 👨‍💻 Desenvolvimento
 Princípios Aplicados
 
 SOLID - Princípios de design orientado a objetos
@@ -142,7 +142,7 @@ Commits semânticos
 
 Cobertura completa de testes
 
-📝 Licença
+## 📝 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
 
 Desenvolvido como trabalho acadêmico de POO com TDD 🎓
